@@ -298,12 +298,13 @@ footer p {
   }
 
   .nav-buttons {
-    display: none;
+    display: flex;
+    gap: 6px;
   }
 }
 
 .login-btn,
 .register-btn {
-  display: inline-block;
-  text-align: center;
+  padding: 8px 10px;
+  font-size: 12px;
 }
