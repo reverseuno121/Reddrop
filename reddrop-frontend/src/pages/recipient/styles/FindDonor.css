@@ -1,0 +1,291 @@
+/* =========================
+   FIND DONOR
+========================= */
+
+.donor-search-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-items: end;
+}
+
+.donor-search-grid .filter-group {
+  min-width: 0;
+}
+
+.donor-search-btn {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* =========================
+   NO DONORS
+========================= */
+
+.no-donors {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.no-donors > div {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.no-donors h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.no-donors p {
+  color: #888;
+  font-size: 13px;
+}
+
+/* =========================
+   DONOR CARDS
+========================= */
+
+.donor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.donor-card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+
+  transition: 0.2s ease;
+}
+
+.donor-card:hover {
+  border-color: #ddd;
+  transform: translateY(-2px);
+}
+
+.donor-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.donor-avatar {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff0f0;
+  color: #d62828;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.donor-card-header h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.available-text {
+  color: #218838 !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   DONOR DETAILS
+========================= */
+
+.donor-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.donor-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.donor-details span {
+  color: #888;
+  font-size: 11px;
+}
+
+.donor-details strong {
+  color: #333;
+  font-size: 13px;
+}
+
+/* =========================
+   DONOR ACTIONS
+========================= */
+
+.donor-card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-btn {
+  padding: 7px 13px;
+
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  background: white;
+  color: #555;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.contact-btn:hover {
+  border-color: #d62828;
+  color: #d62828;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .donor-search-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .donor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .donor-search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donor-search-btn {
+    grid-column: auto;
+  }
+
+  .donor-details {
+    grid-template-columns: 1fr;
+  }
+
+  .donor-card-actions {
+    flex-direction: column;
+  }
+
+  .donor-card-actions button {
+    width: 100%;
+  }
+}
+.donor-profile-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.donor-profile-modal-box {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.donor-profile-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.donor-profile-modal-header h2 {
+  margin: 0 0 5px;
+}
+
+.donor-profile-close {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.donor-profile-close:hover {
+  color: #d62828;
+}
+
+.donor-profile-modal-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.donor-profile-modal-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.donor-profile-modal-details span {
+  font-size: 12px;
+  color: #777;
+}
+
+.donor-profile-modal-details strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.donor-profile-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  .donor-profile-modal-details {
+    grid-template-columns: 1fr;
+  }
+
+  .donor-profile-modal-actions {
+    flex-direction: column;
+  }
+
+  .donor-profile-modal-actions .contact-btn,
+  .donor-profile-modal-actions .table-action {
+    width: 100%;
+  }
+}

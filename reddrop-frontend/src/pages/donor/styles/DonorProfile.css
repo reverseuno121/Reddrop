@@ -1,0 +1,155 @@
+/* =========================
+   DONOR PROFILE
+========================= */
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-header {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #d62828;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.profile-header h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.profile-header p {
+  color: #888;
+  font-size: 13px;
+}
+
+.profile-block {
+  padding: 25px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.profile-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.profile-block-header h3 {
+  font-size: 18px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.profile-field {
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.profile-field span {
+  display: block;
+  margin-bottom: 7px;
+  color: #888;
+  font-size: 12px;
+}
+
+.profile-field strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.blood-group {
+  color: #d62828 !important;
+  font-size: 20px !important;
+}
+
+.available-text {
+  color: #218838 !important;
+}
+
+/* =========================
+   PROFILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-block-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+
+/*Change password btn*/
+.donor-security-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donor-security-card h3 {
+  margin: 0 0 5px;
+}
+
+.donor-security-card p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.donor-password-btn {
+  padding: 10px 18px;
+  border: 1px solid #d62828;
+  border-radius: 6px;
+  background: #fff;
+  color: #d62828;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.donor-password-btn:hover {
+  background: #d62828;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .donor-security-card,
+  .recipient-security-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

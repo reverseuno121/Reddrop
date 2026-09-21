@@ -1,0 +1,177 @@
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+.admin-dashboard-page {
+  width: 100%;
+}
+
+/* =========================
+   ADMIN STATISTICS
+========================= */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.admin-stat-card {
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 10px;
+
+  transition: 0.2s ease;
+}
+
+.admin-stat-card:hover {
+  border-color: #ddd;
+  transform: translateY(-2px);
+}
+
+.admin-stat-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f0;
+
+  border-radius: 10px;
+
+  font-size: 20px;
+}
+
+.admin-stat-card p {
+  margin-bottom: 5px;
+
+  color: #888;
+
+  font-size: 11px;
+}
+
+.admin-stat-card h2 {
+  color: #222;
+
+  font-size: 23px;
+}
+
+/* =========================
+   ADMIN QUICK ACTIONS
+========================= */
+
+.admin-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.admin-action-card {
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: #fffafa;
+
+  border: 1px solid #eee;
+  border-radius: 10px;
+
+  color: #222;
+
+  transition: 0.2s ease;
+}
+
+.admin-action-card:hover {
+  border-color: #d62828;
+  transform: translateY(-2px);
+}
+
+.admin-action-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f0;
+
+  border-radius: 9px;
+
+  font-size: 19px;
+}
+
+.admin-action-card h3 {
+  margin-bottom: 5px;
+
+  font-size: 15px;
+}
+
+.admin-action-card p {
+  color: #888;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.admin-action-card > span {
+  margin-left: auto;
+
+  color: #d62828;
+
+  font-size: 19px;
+}
+
+/* =========================
+   RECENT REQUESTS
+========================= */
+
+.admin-request-table {
+  min-width: 700px;
+}
+
+.admin-request-table td[colspan] {
+  padding: 35px;
+
+  color: #999;
+
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .admin-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-actions {
+    grid-template-columns: 1fr;
+  }
+}

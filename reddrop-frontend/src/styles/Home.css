@@ -1,0 +1,309 @@
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+#home,
+#about,
+#how-it-works,
+#contact {
+  scroll-margin-top: 72px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.logo span {
+  margin-right: 6px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  font-size: 15px;
+  color: #555;
+}
+
+.nav-links a:hover {
+  color: #d62828;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+}
+
+.register-btn {
+  background: #d62828;
+  color: white;
+  border: 1px solid #d62828;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: calc(100vh - 72px);
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  background: #fff7f7;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-tag,
+.section-tag {
+  color: #d62828;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 68px;
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #d62828;
+}
+
+.hero-description {
+  max-width: 570px;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 27px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  border: none;
+  background: #d62828;
+  color: white;
+}
+
+.secondary-btn {
+  background: white;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+  width: 360px;
+  padding: 45px 35px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.blood-drop {
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+
+.hero-card h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.hero-card p {
+  color: #777;
+  line-height: 1.6;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.about h2,
+.how-it-works h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about > p:last-child {
+  max-width: 650px;
+  margin: auto;
+  color: #666;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-it-works {
+  padding: 100px 7%;
+  text-align: center;
+  background: #fafafa;
+}
+
+.steps {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step-card {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  text-align: left;
+  border: 1px solid #eee;
+}
+
+.step-number {
+  color: #d62828;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.step-card h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 50px 7%;
+  text-align: center;
+  background: #191919;
+  color: white;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #aaa;
+  margin-top: 8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+}
+
+.login-btn,
+.register-btn {
+  display: inline-block;
+  text-align: center;
+}

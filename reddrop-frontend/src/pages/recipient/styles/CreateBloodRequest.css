@@ -1,0 +1,130 @@
+/* =========================
+   CREATE BLOOD REQUEST
+========================= */
+
+.blood-request-form-card {
+  padding: 30px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.form-section {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-section-title {
+  margin-bottom: 25px;
+}
+
+.form-section-title h2 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.form-section-title p {
+  color: #888;
+  font-size: 13px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grid .form-group {
+  margin-bottom: 0;
+}
+
+.location-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.location-form-grid .filter-group {
+  min-width: 0;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+}
+
+.form-group textarea:focus {
+  border-color: #d62828;
+}
+
+.request-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  padding: 14px 25px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  color: #555;
+  background: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  border-color: #d62828;
+  color: #d62828;
+}
+
+.request-form-actions .auth-submit-btn {
+  width: auto;
+  padding: 0 25px;
+  margin-top: 0;
+}
+
+@media (max-width: 800px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .blood-request-form-card {
+    padding: 20px;
+  }
+
+  .request-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .cancel-btn {
+    text-align: center;
+  }
+
+  .request-form-actions .auth-submit-btn {
+    width: 100%;
+  }
+}
+.form-group {
+  margin-bottom: 20px;
+}

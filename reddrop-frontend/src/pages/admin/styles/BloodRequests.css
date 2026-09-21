@@ -1,0 +1,463 @@
+/* =========================
+   ADMIN BLOOD REQUESTS
+========================= */
+
+.admin-blood-requests-page {
+  width: 100%;
+}
+
+/* =========================
+   REQUEST STATISTICS
+========================= */
+
+.admin-request-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.admin-request-stat {
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.admin-request-stat > span {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f0;
+  border-radius: 9px;
+
+  font-size: 19px;
+}
+
+.admin-request-stat p {
+  margin-bottom: 4px;
+
+  color: #888;
+  font-size: 11px;
+}
+
+.admin-request-stat strong {
+  color: #222;
+  font-size: 20px;
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.admin-request-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.admin-request-filters > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-request-filters label {
+  margin-bottom: 8px;
+
+  color: #333;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-request-filters input,
+.admin-request-filters select {
+  width: 100%;
+  height: 45px;
+
+  padding: 0 13px;
+
+  border: 1px solid #ddd;
+  border-radius: 7px;
+
+  background: white;
+
+  color: #333;
+  font-size: 13px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.admin-request-filters input:focus,
+.admin-request-filters select:focus {
+  border-color: #d62828;
+
+  box-shadow:
+    0 0 0 3px rgba(214, 40, 40, 0.08);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.admin-request-table {
+  min-width: 1050px;
+}
+
+.admin-request-table td {
+  vertical-align: middle;
+}
+
+/* =========================
+   BLOOD GROUP
+========================= */
+
+.request-blood-group {
+  display: inline-flex;
+
+  width: 36px;
+  height: 36px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff0f0;
+
+  color: #d62828;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================
+   VIEW BUTTON
+========================= */
+
+.admin-request-view-btn {
+  padding: 7px 13px;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+
+  background: white;
+
+  color: #d62828;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.admin-request-view-btn:hover {
+  border-color: #d62828;
+  background: #fff0f0;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.admin-no-requests {
+  padding: 40px !important;
+
+  color: #999 !important;
+
+  text-align: center !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .admin-request-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admin-request-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .admin-request-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-request-filters {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-request-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.admin-request-modal-box {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.admin-request-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.admin-request-modal-header h2 {
+  margin: 0 0 8px;
+}
+
+.admin-request-modal-close {
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.admin-request-modal-close:hover {
+  color: #d62828;
+}
+
+.admin-request-modal-section {
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+.admin-request-modal-section h3 {
+  margin: 0 0 18px;
+}
+
+.admin-request-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.admin-request-details-grid div,
+.admin-accepted-donor-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-request-details-grid span,
+.admin-accepted-donor-grid span {
+  font-size: 12px;
+  color: #777;
+}
+
+.admin-request-details-grid strong,
+.admin-accepted-donor-grid strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.admin-accepted-donor {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.admin-donor-avatar {
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff1f1;
+  color: #d62828;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.admin-accepted-donor-info {
+  flex: 1;
+}
+
+.admin-accepted-donor-info h3 {
+  margin-bottom: 16px;
+}
+
+.admin-accepted-donor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.admin-accepted-donor-grid a {
+  color: #d62828;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.admin-accepted-donor-grid a:hover {
+  text-decoration: underline;
+}
+
+.admin-request-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.admin-request-call-btn,
+.admin-request-modal-close-btn {
+  padding: 10px 17px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.admin-request-call-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid #d62828;
+  background: #d62828;
+  color: #fff;
+}
+
+.admin-request-call-btn:hover {
+  background: #b91f1f;
+}
+
+.admin-request-modal-close-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+}
+
+.admin-request-modal-close-btn:hover {
+  border-color: #d62828;
+  color: #d62828;
+}
+
+@media (max-width: 600px) {
+  .admin-request-details-grid,
+  .admin-accepted-donor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-accepted-donor {
+    flex-direction: column;
+  }
+
+  .admin-request-modal-actions {
+    flex-direction: column;
+  }
+
+  .admin-request-call-btn,
+  .admin-request-modal-close-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Action buttons */
+.admin-request-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-request-view-btn,
+.admin-request-issue-btn {
+  border-radius: 7px;
+  padding: 8px 13px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* View */
+.admin-request-view-btn {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #d8d8d8;
+}
+
+.admin-request-view-btn:hover {
+  background: #f5f5f5;
+  border-color: #c8c8c8;
+}
+
+/* Issue Blood */
+.admin-request-issue-btn {
+  background: #d62828;
+  color: #ffffff;
+  border: 1px solid #d62828;
+}
+
+.admin-request-issue-btn:hover {
+  background: #b91f1f;
+  border-color: #b91f1f;
+}
+
+.admin-request-issue-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Donor Assigned */
+.status-donor-assigned {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8a5a00;
+  background: #fff3cd;
+}
+
+/* Donation Recorded */
+.status-donation-recorded {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #00695c;
+  background: #d9f3ef;
+}

@@ -1,0 +1,195 @@
+/* =========================
+   CUSTOM SELECT
+========================= */
+
+.custom-select-group {
+  width: 100%;
+}
+
+.custom-select-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+/* Main Button */
+
+.custom-select-button {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background: white;
+  color: #333;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.custom-select-button:hover {
+  border-color: #d62828;
+}
+
+.custom-select-button.active {
+  border-color: #d62828;
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.08);
+}
+
+/* Left Side */
+
+.custom-select-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.custom-select-icon {
+  width: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+.custom-select-value {
+  color: #333;
+}
+
+.custom-select-placeholder {
+  color: #999;
+}
+
+/* Arrow */
+
+.custom-select-arrow {
+  color: #d62828;
+  font-size: 11px;
+
+  transition: transform 0.2s ease;
+}
+
+.custom-select-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+
+.custom-select-menu {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+
+  padding: 7px;
+
+  background: white;
+
+  border: 1px solid #eee;
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.10);
+
+  max-height: 260px;
+  overflow-y: auto;
+
+  animation: selectDropdown 0.15s ease;
+}
+
+@keyframes selectDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Options */
+
+.custom-select-option {
+  width: 100%;
+
+  min-height: 45px;
+
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+  border-radius: 7px;
+
+  background: white;
+
+  color: #333;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.custom-select-option:hover {
+  background: #fff3f3;
+}
+
+.custom-select-option.selected {
+  background: #fff0f0;
+  color: #d62828;
+  font-weight: 600;
+}
+
+/* Option Left */
+
+.option-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-icon {
+  width: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d62828;
+  font-size: 16px;
+}
+
+.option-check {
+  color: #d62828;
+  font-size: 18px;
+  font-weight: 700;
+}

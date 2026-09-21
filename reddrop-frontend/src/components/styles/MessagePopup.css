@@ -1,0 +1,206 @@
+/* ================================
+   Message Popup
+================================ */
+
+.message-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.message-popup {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  animation: popupShow 0.2s ease;
+}
+
+/* ================================
+   Popup Icon
+================================ */
+
+.message-popup-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Error Icon */
+.popup-error .message-popup-icon {
+  background: #fde8e7;
+  color: #d62828;
+}
+
+/* Success Icon */
+.popup-success .message-popup-icon {
+  background: #e4f7ea;
+  color: #1b8a4b;
+}
+
+/* ================================
+   Popup Heading
+================================ */
+
+.message-popup h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+/* Error Heading */
+.message-popup.popup-error h3 {
+  color: #b71717 !important;
+}
+
+/* Success Heading */
+.message-popup.popup-success h3 {
+  color: #0e8c38 !important;
+}
+
+/* ================================
+   Popup Message
+================================ */
+
+.message-popup p {
+  margin: 0 0 22px;
+  color: #2d2c2c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================================
+   Popup Button
+================================ */
+
+.message-popup-btn {
+  min-width: 100px;
+  padding: 11px 20px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.message-popup-btn:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Error Button */
+.popup-error .message-popup-btn {
+  background: #d62828;
+}
+
+.popup-error .message-popup-btn:hover {
+  background: #b91f1f;
+}
+
+/* Success Button */
+.popup-success .message-popup-btn {
+  background: #1b8a4b;
+}
+
+.popup-success .message-popup-btn:hover {
+  background: #146c3a;
+}
+
+/* ================================
+   Animation
+================================ */
+
+@keyframes popupShow {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================================
+   Popup Actions
+================================ */
+
+.message-popup-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Cancel Button */
+
+.message-popup-cancel-btn {
+  min-width: 100px;
+  padding: 11px 20px;
+  border: 1px solid #b3b2b2;
+  outline: none;
+  border-radius: 7px;
+  background: #fcf6f6;
+  color: #555555;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.message-popup-cancel-btn:hover {
+  background: #f5f5f5;
+  border-color: #909090;
+}
+
+.message-popup-cancel-btn:focus {
+  outline: none;
+  border-color: #d6d6d6;
+  box-shadow: none;
+}
+
+/* Confirmation Icon */
+
+.popup-confirmation .message-popup-icon {
+  background: #e8f0fe;
+  color: #3157a6;
+}
+
+/* Confirmation Heading */
+
+.message-popup.popup-confirmation h3 {
+  color: #3157a6 !important;
+}
+
+/* Confirmation Button */
+
+.popup-confirmation .message-popup-btn {
+  background: #3157a6;
+}
+
+.popup-confirmation .message-popup-btn:hover {
+  background: #24458a;
+}
+
+.message-popup-icon {
+  color: #198754;
+}
+

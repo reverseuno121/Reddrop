@@ -1,0 +1,139 @@
+.admin-donations-page {
+  width: 100%;
+}
+
+.admin-donations-page .dashboard-stats {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .admin-donations-page .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-donations-page .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.donation-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.donation-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-form-field label {
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.donation-form-field input,
+.donation-form-field select,
+.donation-form-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.donation-form-field input:focus,
+.donation-form-field select:focus,
+.donation-form-field textarea:focus {
+  border-color: #d62828;
+}
+
+.donation-form-field input:read-only {
+  background: #f5f5f5;
+  color: #777;
+}
+
+.donation-form-field textarea {
+  resize: vertical;
+}
+
+.donation-notes-field {
+  grid-column: 1 / -1;
+}
+
+.donation-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.donation-cancel-btn,
+.donation-save-btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.donation-cancel-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+}
+
+.donation-cancel-btn:hover {
+  border-color: #d62828;
+  color: #d62828;
+}
+
+.donation-save-btn {
+  border: 1px solid #d62828;
+  background: #d62828;
+  color: #fff;
+}
+
+.donation-save-btn:hover {
+  background: #b91f1f;
+}
+
+.donation-cancel-btn:disabled,
+.donation-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  .donation-form {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-notes-field,
+  .donation-form-actions {
+    grid-column: auto;
+  }
+
+  .donation-form-actions {
+    justify-content: stretch;
+  }
+
+  .donation-cancel-btn,
+  .donation-save-btn {
+    flex: 1;
+  }
+}
