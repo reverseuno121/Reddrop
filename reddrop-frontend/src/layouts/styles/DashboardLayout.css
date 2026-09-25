@@ -606,7 +606,7 @@
   .dashboard-stats {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-
+}
 
 /* Mobile */
 
@@ -778,7 +778,7 @@
   width: 20px;
   min-width: 20px;
   text-align: center;
-}}
+}
 /* =========================
    MOBILE LOGOUT
 ========================= */
@@ -796,5 +796,5 @@
     width: 25px;
     min-width: 25px;
     font-size: 17px;
-  }
+}
 }
